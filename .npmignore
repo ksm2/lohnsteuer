@@ -1,0 +1,7 @@
+.idea/
+pseudocodes/
+*.ts
+!*.d.ts
+tsconfig.json
+.editorconfig
+.gitattributes

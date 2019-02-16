@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
     "target": "esnext",
+    "lib": ["es2016"],
     "module": "commonjs",
+    "declaration": true,
     "strict": true,
     "typeRoots": [
       "./typings",
       "node_modules/@types"
     ],
     "esModuleInterop": true
-  }
+  },
+  "exclude": ["node_modules"]
 }

@@ -18,7 +18,7 @@ declare module "bigdecimal" {
     static valueOf(value: number): BigDecimal
     longValue(): number
     compareTo(other: BigDecimal): number
-    setScale(precision: number, roundingMode: number): BigDecimal
+    setScale(precision: number, roundingMode?: number): BigDecimal
     add(other: BigDecimal): BigDecimal
     min(other: BigDecimal): BigDecimal
     subtract(other: BigDecimal): BigDecimal
