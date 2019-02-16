@@ -1,0 +1,75 @@
+import { BigDecimal } from 'bigdecimal'
+
+/**
+ * Inputs accepted by {{name}}.
+ */
+export interface {{name}}Inputs {
+{{#each inputs}}
+
+  {{multilinecmt comment '  '}}
+  {{name}}{{#if default}}?{{/if}}: {{type}}
+{{/each}}
+}
+
+/**
+ * Outputs returned by {{name}}.
+ */
+export interface {{name}}Outputs {
+{{#each outputs}}
+
+  {{multilinecmt comment '  '}}
+  {{name}}: {{type}}
+{{/each}}
+}
+
+/* CONSTANTS */
+
+{{#each constants}}
+{{singlelinecmt comment}}
+const {{name}}: {{type}} = {{{value}}}
+{{/each}}
+
+/* INTERNALS */
+
+{{#each internals}}
+{{singlelinecmt comment}}
+let {{name}}: {{type}} = {{{default}}}
+{{/each}}
+
+/**
+ * Calculates the {{name}}.
+ *
+ * @params inputs - The inputs for the calculation.
+ * @returns The outputs of the calculation.
+ */
+export function {{fn}}(inputs: {{name}}Inputs): {{name}}Outputs {
+  // Inputs
+  let {
+{{#each inputs}}
+{{#if default}}
+    {{name}} = {{{default}}},
+{{else}}
+    {{name}},
+{{/if}}
+{{/each}}
+  } = inputs
+
+  // Outputs
+  {{#each outputs}}
+  let {{name}} = {{{default}}}
+  {{/each}}
+
+  {{#each methods}}
+  function {{name}}(): void {
+{{{body}}}
+  } /* of {{name}} */
+
+  {{/each}}
+{{{main}}}
+
+  return {
+    {{#each outputs}}
+    {{name}},
+    {{/each}}
+  }
+}
