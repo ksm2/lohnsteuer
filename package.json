@@ -7,5 +7,18 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ksm2/lohnsteuer"
+  },
+  "dependencies": {
+    "@types/handlebars": "^4.0.40",
+    "@types/node": "^11.9.4",
+    "@types/node-fetch": "^2.1.6",
+    "@types/sax": "^1.0.1",
+    "bigdecimal": "^0.6.1",
+    "commandpost": "^1.4.0",
+    "handlebars": "^4.1.0",
+    "node-fetch": "^2.3.0",
+    "sax": "^1.2.4",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3"
   }
 }
