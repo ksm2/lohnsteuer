@@ -4,6 +4,9 @@
   "description": "Calculator of the German net tax",
   "main": "lib/index.js",
   "license": "MIT",
+  "bin": {
+    "steuer": "bin/steuer.ts"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ksm2/lohnsteuer"
