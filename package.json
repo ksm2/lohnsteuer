@@ -1,0 +1,11 @@
+{
+  "name": "lohnsteuer",
+  "version": "0.1.2",
+  "description": "Calculator of the German net tax",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ksm2/lohnsteuer"
+  }
+}
