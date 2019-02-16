@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "strict": true,
+    "typeRoots": [
+      "./typings",
+      "node_modules/@types"
+    ],
+    "esModuleInterop": true
+  }
+}
