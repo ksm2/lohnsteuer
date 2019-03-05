@@ -1,5 +1,7 @@
 .idea/
 pseudocodes/
+src/
+cli/
 *.ts
 !*.d.ts
 tsconfig.json

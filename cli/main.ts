@@ -1,6 +1,6 @@
 #!/usr/bin/npx ts-node
 import { create, exec } from 'commandpost'
-import { download, DownloadArguments, DownloadOptions, transform, TransformArgs, TransformOpts } from '../cli'
+import { download, DownloadArguments, DownloadOptions, transform, TransformArgs, TransformOpts } from '.'
 
 const app = create('steuer')
   .help('-h, --help', 'Renders this help text.')

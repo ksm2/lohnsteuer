@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 import path from 'path'
-import { writeFile, writeLine } from '../lib'
+import { writeFile, writeLine } from './io'
 
 export interface DownloadOptions {
 }

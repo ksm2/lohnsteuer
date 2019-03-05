@@ -3,25 +3,28 @@
   "version": "1.0.0",
   "description": "Calculator of the German net tax",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "license": "MIT",
-  "bin": {
-    "steuer": "bin/steuer.js"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ksm2/lohnsteuer"
   },
   "scripts": {
-    "prepack": "tsc"
+    "prepack": "yarn build",
+    "build": "rimraf lib && tsc",
+    "watch": "tsc --watch"
   },
   "dependencies": {
+    "bigdecimal": "^0.6.1"
+  },
+  "devDependencies": {
     "@types/node": "^11.9.4",
     "@types/node-fetch": "^2.1.6",
     "@types/sax": "^1.0.1",
-    "bigdecimal": "^0.6.1",
     "commandpost": "^1.4.0",
     "handlebars": "^4.1.0",
     "node-fetch": "^2.3.0",
+    "rimraf": "^2.6.3",
     "sax": "^1.2.4",
     "ts-node": "^8.0.2",
     "typescript": "^3.3.3"

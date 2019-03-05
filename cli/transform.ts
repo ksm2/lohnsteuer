@@ -1,5 +1,6 @@
 import path from 'path'
-import { mkdirp, readPAP, renderPAP } from '../lib'
+import { mkdirp } from './io'
+import { readPAP, renderPAP } from './pap'
 
 export interface TransformOpts {
   year: string[]

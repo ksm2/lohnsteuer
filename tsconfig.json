@@ -4,6 +4,8 @@
     "lib": ["es2016"],
     "module": "commonjs",
     "declaration": true,
+    "rootDir": "./src",
+    "outDir": "./lib",
     "strict": true,
     "typeRoots": [
       "./typings",
@@ -11,5 +13,6 @@
     ],
     "esModuleInterop": true
   },
+  "files": ["./src/index.ts"],
   "exclude": ["node_modules"]
 }
